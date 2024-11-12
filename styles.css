@@ -1,0 +1,191 @@
+/* Custom Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7fa;
+    color: #333;
+}
+
+/* Header Styles */
+.header {
+    background-color: #f2e8f7;
+    padding: 20px;
+    text-align: center;
+}
+
+.header .icon {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 10px;
+}
+
+/* Feature Section */
+.feature-container {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.feature-box {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+}
+
+.feature-icon {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.feature-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.feature-text {
+    color: #666;
+}
+
+/* Insights Section */
+.section {
+    padding: 60px 0;
+}
+
+.section h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #222;
+}
+
+.section p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.btn-custom {
+    background-color: #d259ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #c04ae2;
+}
+
+/* CTA Section */
+.cta-container h6 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #ffffff;
+}
+
+.cta-container p {
+    color: #b3b3b3;
+    line-height: 1.6;
+}
+
+.cta-button {
+    background-color: #a84ef7;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    background-color: #0e0333;
+    padding: 50px 0;
+    color: #ffffff;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    margin: 20px;
+}
+
+.footer-section h1 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    color: #b3b3b3;
+    cursor: pointer;
+}
+
+.footer-section p:hover {
+    color: #fff;
+}
+
+.email-input {
+    display: flex;
+    align-items: center;
+    background-color: #2c2c6c;
+    border-radius: 25px;
+    padding: 10px 20px;
+    max-width: 300px;
+}
+
+.email-input input {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    outline: none;
+    flex: 1;
+}
+
+.email-input button {
+    background-color: #a84ef7;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 10px;
+    color: #b3b3b3;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: #b3b3b3;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.copyright {
+    text-align: center;
+    color: #b3b3b3;
+    font-size: 12px;
+    margin-top: 30px;
+}
