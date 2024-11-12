@@ -2,6 +2,112 @@
     --primary-gradient: linear-gradient(to right, #8B5CF6, #EC4899);
 }
 
+/* Home Section */
+.home-section {
+    padding: 140px 0;
+    padding-bottom: 100px;
+    background-color: #0a022e;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin-bottom: 140px;
+    position: relative;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+    background-color: transparent;
+    padding: 1rem 3rem;
+}
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+}
+.nav-link {
+    color: #b3b3b3 !important;
+    font-size: 1.1em;
+}
+.nav-link:hover {
+    color: #fff !important;
+}
+.auth-buttons .btn-link {
+    color: #fff !important;
+    padding-inline: 25px;
+    border-radius: 7px;
+    border-color: #ff54f2;
+}
+.auth-buttons .btn-primary {
+    background: linear-gradient(90deg, #a073ff, #ff54f2);
+    padding-inline: 25px;
+    border: none;
+}
+.main-heading {
+    font-size: 3.5em;
+    font-weight: bold;
+    line-height: 1.2;
+}
+.main-heading span {
+    color: #ff54f2;
+    display: block;
+}
+.subheading {
+    font-size: 1.1em;
+    color: #b3b3b3;
+    margin-top: 1rem;
+}
+.cta-button {
+    background: linear-gradient(90deg, #a073ff, #ff54f2);
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    margin-top: 1.5rem;
+}
+.review-badge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9em;
+    margin-bottom: 1rem;
+    color: #ffcf54;
+}
+.image-section {
+    position: relative;
+}
+.circle-effect {
+    position: relative;
+    display: inline-block;
+    padding: 150px; 
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0));
+    box-shadow: 0 0 15px rgba(255, 84, 242, 0.5),
+                0 0 30px rgba(160, 115, 255, 0.3),
+                0 0 45px rgba(255, 84, 242, 0.2),
+                0 0 60px rgba(160, 115, 255, 0.1);
+}
+.money-bag {
+width: 100%;
+max-width: 300px;
+position: relative;
+z-index: 1; 
+}
+
+.floating-elements img {
+    width: 50px;
+    position: absolute;
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.element-1 { top: 10%; left: 10%; height: 90px;}
+.element-2 { top: 20%; right: 15%; height: 90px;}
+.element-3 { bottom: 20%; left: 15%; height: 90px;}
+.element-4 { bottom: 10%; right: 10%; height: 90px;}
+
 /* Global Responsive Styles */
 @media (max-width: 768px) {
     .data-title {
@@ -257,9 +363,6 @@
         width: 100%;
     }
 }
-
-
-
 
 
 /* Core Benefits Section */
