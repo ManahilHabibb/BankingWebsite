@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.jumbotron {
+    background-color: #007bff;
+    color: white;
+    padding: 4rem 0;
+}
+
+.hero {
+    background-image: url('img/bank-bg.jpg');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+.container h2 {
+    color: #007bff;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.contact {
+    background-color: #ffffff;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
