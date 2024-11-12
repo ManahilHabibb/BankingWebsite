@@ -1,0 +1,611 @@
+:root {
+    --primary-gradient: linear-gradient(to right, #8B5CF6, #EC4899);
+}
+
+/* Global Responsive Styles */
+@media (max-width: 768px) {
+    .data-title {
+        font-size: calc(2rem + 2vw) !important;
+    }
+    .data-description {
+        font-size: 1rem !important;
+    }
+    .feature-title {
+        font-size: 1.5rem !important;
+    }
+    .feature-description {
+        font-size: 1rem !important;
+    }
+    .stats-value {
+        font-size: 2rem !important;
+    }
+}
+
+/* Partner Logos Section */
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.partner-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.partner-logo i {
+    font-size: 24px;
+    color: #1a1a1a;
+}
+
+/* Features Section */
+.features-section {
+    padding: 100px 0;
+    background: #f8f9ff;
+}
+
+.feature-card {
+    border-radius: 24px;
+    padding: 20px;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card.pink { background-color: #fff1f8; }
+.feature-card.mint { background-color: #f1fff8; }
+.feature-card.lavender { background-color: #f1f1ff; }
+
+.feature-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 20px 0;
+    color: #1a1a1a;
+}
+
+.feature-description {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Data Section */
+.data-section {
+    padding: 80px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.data-content {
+    padding-right: 0;
+}
+
+@media (min-width: 992px) {
+    .data-content {
+        padding-right: 4rem;
+    }
+}
+
+.data-title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    color: #1a1a1a;
+}
+
+.data-description {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    max-width: 600px;
+}
+
+.get-started-btn {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 12px 32px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.get-started-btn:hover {
+    transform: translateY(-2px);
+    color: white;
+}
+
+/* Earnings Section */
+.earnings-section {
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+    margin-top: 100px;
+}
+
+.earnings-content {
+    padding-right: 0;
+}
+
+@media (min-width: 992px) {
+    .earnings-content {
+        padding-right: 4rem;
+    }
+}
+
+.stats-floating-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 2;
+}
+
+.stats-card-bottom {
+    bottom: 20%;
+    right: 0%;
+    min-width: 240px;
+}
+
+.stats-icon {
+    width: 40px;
+    height: 40px;
+    background: #e8f5ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.stats-icon i {
+    color: #2563EB;
+    font-size: 20px;
+}
+
+.stats-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stats-label {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.percentage-up {
+    color: #22C55E;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.last-year {
+    color: #666;
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+.img-container {
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.person-img {
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .features-section {
+        padding: 50px 0;
+    }
+    
+    .data-section {
+        padding: 40px 0;
+    }
+    
+    .earnings-section {
+        margin-top: 50px;
+        padding: 40px 0;
+    }
+    
+    .stats-floating-card {
+        position: relative;
+        margin-bottom: 20px;
+        top: 0 !important;
+        right: 0 !important;
+    }
+    
+    .img-container {
+        height: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .partner-logos {
+        gap: 30px;
+    }
+    
+    .stats-floating-card {
+        width: 100%;
+    }
+}
+
+
+
+
+
+/* Core Benefits Section */
+.core-benefits {
+    background-color: #0a061f;
+    color: white;
+    padding: 100px 0;
+}
+
+.benefits-header {
+    margin-bottom: 60px;
+}
+
+.subtitle {
+    color: #8B5CF6;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.benefits-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.benefits-description {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.benefit-card {
+    padding: 20px;
+    height: 100%;
+}
+
+.benefit-icon {
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.benefit-icon i {
+    font-size: 24px;
+    color: white;
+}
+
+.benefit-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.benefit-card p {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .core-benefits {
+        padding: 60px 0;
+    }
+
+    .benefits-title {
+        font-size: 2.5rem;
+    }
+
+    .benefit-card {
+        padding: 15px;
+    }
+}
+
+
+
+
+
+/* Reviews Section */
+.reviews-section {
+    padding: 100px 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.reviews-title {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.reviews-row {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+    padding: 20px 0;
+}
+
+/* Scrolling animations */
+.scroll-right {
+    animation: scrollRight 30s linear infinite;
+}
+
+.scroll-left {
+    animation: scrollLeft 30s linear infinite;
+}
+
+@keyframes scrollRight {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.review-card {
+    background-color: #e8f7f7;
+    border-radius: 16px;
+    padding: 24px;
+    max-width: 380px;
+    flex-shrink: 0;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.reviewer-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.reviewer-info h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.reviewer-info p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+.review-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+.rating {
+    color: #FFB800;
+    font-size: 1.2rem;
+}
+
+/* Hover effect */
+.review-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .reviews-title {
+        font-size: 2.5rem;
+    }
+
+    .review-card {
+        min-width: 300px;
+        padding: 20px;
+    }
+}
+
+
+
+
+/* Footer Section */
+.footer-section {
+    background-color: #0a061f;
+    color: white;
+    padding: 80px 0 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hero Content */
+.footer-hero {
+    margin-bottom: 100px;
+    position: relative;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    
+}
+
+.hero-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    margin-bottom: 32px;
+}
+
+
+
+/* Footer Content */
+.footer-content {
+    padding: 60px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-brand h3 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+.footer-brand p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 24px;
+}
+
+.email-signup {
+    display: flex;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.footer-input {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 8px;
+    flex-grow: 1;
+}
+
+.footer-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.submit-btn {
+    background: #8B5CF6;
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #7c4ef3;
+}
+
+/* Footer Links */
+.footer-content h4 {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 16px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-legal {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-legal a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .footer-legal {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
