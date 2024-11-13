@@ -32,7 +32,7 @@
                 </li>
             </ul>
             <div class="auth-buttons ml-4">
-                <a href="#" class="btn btn-link">Login</a>
+                <a href="#" class="btn btn-link"data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
                 <a href="#" class="btn btn-primary">Sign Up</a>
             </div>
         </div>
@@ -70,6 +70,50 @@
         </div>
     </div>
 </section>
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Enter your Login Details</h5>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="anyname" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="anyname" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="url" placeholder="Enter your Email Id">
+                    </div>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" placeholder="Enter your Username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your Password">
+                    </div>
+                    <button type="submit" class="btn btn-login w-100">LOGIN</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- JavaScript -->
+<script>
+    // Event listener for login button
+    document.querySelector('.auth-buttons a.btn-link').addEventListener('click', function(event) {
+        event.preventDefault(); 
+        var loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+        loginModal.show(); 
+    });
+</script>
+
 
     <!-- Partner Logos Section -->
     <div class="container-fluid bg-white py-4">

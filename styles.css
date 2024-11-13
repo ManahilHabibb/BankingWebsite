@@ -715,3 +715,61 @@ z-index: 1;
         gap: 16px;
     }
 }
+
+
+/* Login Section */
+.modal-content {
+    background-color: #0a022e7a;
+    backdrop-filter: blur(10px);
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    border-color: #fff;
+}
+.form-control {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    color: white;
+}
+.form-control:focus {
+    background-color: transparent;
+    border-color: #ffffff;
+    box-shadow: none;
+    color: white;
+}
+.modal-header {
+    border-bottom: none;
+    margin-left: 22.5%;
+}
+.btn-login {
+    background: linear-gradient(90deg, #a073ff, #ff54f2);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    color: white;
+}
+.btn-login:hover {
+    background-color: #6b40c0;
+}
+
+        @media (max-width: 400px) {
+            body {
+                position: absolute;
+            }
+
+            .container {
+                height: 100vh;
+                width: 100%;
+            }
+
+            .social-links {
+                top: 75%;
+            }
+        }
+
+        @keyframes apper {
+            0% {
+                transform: translateX(-50%);
+            }
+        }
