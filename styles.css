@@ -5,7 +5,7 @@
 /* Home Section */
 .home-section {
     padding: 140px 0;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
     background-color: #0a022e;
     color: white;
     font-family: Arial, sans-serif;
@@ -17,7 +17,7 @@
     top: 0;
     width: 100%;
     z-index: 1000; 
-    background-color: transparent;
+    background-color: #0a022e;
     padding: 1rem 3rem;
 }
 .navbar-brand {
@@ -28,6 +28,7 @@
 .nav-link {
     color: #b3b3b3 !important;
     font-size: 1.1em;
+    margin-right: 50px;
 }
 .nav-link:hover {
     color: #fff !important;
@@ -37,6 +38,7 @@
     padding-inline: 25px;
     border-radius: 7px;
     border-color: #ff54f2;
+    margin-right: 30px;
 }
 .auth-buttons .btn-primary {
     background: linear-gradient(90deg, #a073ff, #ff54f2);
@@ -44,7 +46,7 @@
     border: none;
 }
 .main-heading {
-    font-size: 3.5em;
+    font-size: 5em;
     font-weight: bold;
     line-height: 1.2;
 }
@@ -55,7 +57,7 @@
 .subheading {
     font-size: 1.1em;
     color: #b3b3b3;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 .cta-button {
     background: linear-gradient(90deg, #a073ff, #ff54f2);
@@ -88,14 +90,15 @@
                 0 0 60px rgba(160, 115, 255, 0.1);
 }
 .money-bag {
-width: 100%;
+width: 1500px;
+height: auto;
 max-width: 300px;
 position: relative;
 z-index: 1; 
 }
 
 .floating-elements img {
-    width: 50px;
+    width: 100px;
     position: absolute;
     animation: float 3s ease-in-out infinite;
 }
@@ -103,10 +106,10 @@ z-index: 1;
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
 }
-.element-1 { top: 10%; left: 10%; height: 90px;}
-.element-2 { top: 20%; right: 15%; height: 90px;}
-.element-3 { bottom: 20%; left: 15%; height: 90px;}
-.element-4 { bottom: 10%; right: 10%; height: 90px;}
+.element-1 { top: 20%; left: 10%; height: 90px;}
+.element-2 { top: 30%; right: 15%; height: 90px;}
+.element-3 { bottom: 30%; left: 15%; height: 90px;}
+.element-4 { bottom: 20%; right: 10%; height: 90px;}
 
 /* Global Responsive Styles */
 @media (max-width: 768px) {
