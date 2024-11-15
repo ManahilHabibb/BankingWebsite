@@ -32,12 +32,12 @@
                 </li>
             </ul>
             <div class="auth-buttons ml-4">
-                <a href="#" class="btn btn-link"data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
-                <a href="#" class="btn btn-primary">Sign Up</a>
+                <a href="#" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signUpModal">Sign Up</a>
             </div>
         </div>
     </nav>
-</div>
+
     <!-- Main Content -->
     <div class="container mt-5">
         <div class="row align-items-center">
@@ -106,7 +106,6 @@
 
 <!-- JavaScript -->
 <script>
-    // Event listener for login button
     document.querySelector('.auth-buttons a.btn-link').addEventListener('click', function(event) {
         event.preventDefault(); 
         var loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
@@ -114,6 +113,51 @@
     });
 </script>
 
+
+<!-- Sign Up Modal -->
+<div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="signUpModalLabel">Create Your Account</h5>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="fullName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="signupemail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="signupusername" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" placeholder="Choose a username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="signuppassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Create a password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirmPassword" placeholder="Re-enter your password">
+                    </div>
+                    <button type="submit" class="btn btn-signup w-100">SIGN UP</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+    document.querySelector('.auth-buttons a.btn-primary').addEventListener('click', function(event) {
+        event.preventDefault(); 
+        var signUpModal = new bootstrap.Modal(document.getElementById('signUpModal'));
+        signUpModal.show(); 
+    });
+</script>
 
     <!-- Partner Logos Section -->
     <div class="container-fluid bg-white py-4">
