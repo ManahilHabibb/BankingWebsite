@@ -79,22 +79,22 @@
                 <h5 class="modal-title" id="loginModalLabel">Enter your Login Details</h5>
             </div>
             <div class="modal-body">
-                <form>
+                <form action="login.php" method="post" id="login-form" class="needs-validation" novalidate>
                     <div class="mb-3">
-                        <label for="anyname" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="anyname" placeholder="Enter your name">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Full Name" required>
                     </div>
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="url" placeholder="Enter your Email Id">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email" required>
                     </div>
                     <div class="mb-3">
                         <label for="username" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="username" placeholder="Enter your Username">
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Enter your Username" required>
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Enter your Password">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter your Password" required>
                     </div>
                     <button type="submit" class="btn btn-login w-100">LOGIN</button>
                 </form>
@@ -102,17 +102,6 @@
         </div>
     </div>
 </div>
-
-
-<!-- JavaScript -->
-<script>
-    document.querySelector('.auth-buttons a.btn-link').addEventListener('click', function(event) {
-        event.preventDefault(); 
-        var loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
-        loginModal.show(); 
-    });
-</script>
-
 
 <!-- Sign Up Modal -->
 <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
@@ -122,26 +111,26 @@
                 <h5 class="modal-title" id="signUpModalLabel">Create Your Account</h5>
             </div>
             <div class="modal-body">
-                <form>
+                <form action="signup.php" method="post" id="signup-form" class="needs-validation" novalidate>
                     <div class="mb-3">
                         <label for="fullName" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+                        <input type="text" class="form-control" id="fullName" name="name" placeholder="Enter your full name" required>
                     </div>
                     <div class="mb-3">
-                        <label for="signupemail" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
                     </div>
                     <div class="mb-3">
-                        <label for="signupusername" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="username" placeholder="Choose a username">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Choose a username" required>
                     </div>
                     <div class="mb-3">
-                        <label for="signuppassword" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Create a password">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Create a password" required>
                     </div>
                     <div class="mb-3">
                         <label for="confirmPassword" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="confirmPassword" placeholder="Re-enter your password">
+                        <input type="password" class="form-control" id="confirmPassword" placeholder="Re-enter your password" required>
                     </div>
                     <button type="submit" class="btn btn-signup w-100">SIGN UP</button>
                 </form>
@@ -152,6 +141,12 @@
 
 <!-- JavaScript -->
 <script>
+    document.querySelector('.auth-buttons a.btn-link').addEventListener('click', function(event) {
+        event.preventDefault(); 
+        var loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+        loginModal.show(); 
+    });
+
     document.querySelector('.auth-buttons a.btn-primary').addEventListener('click', function(event) {
         event.preventDefault(); 
         var signUpModal = new bootstrap.Modal(document.getElementById('signUpModal'));
