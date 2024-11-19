@@ -1,16 +1,12 @@
-```php
 <?php
-
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-// Database connection
+// Database credentials
 $servername = "localhost";
-$username = "root";
-$password = ""; // Default password is empty for XAMPP
-$database = "mybank";
+$username = "root"; // Default username for XAMPP
+$password = "";     // Default password for XAMPP
+$dbname = "flask_user";
 
-$conn = new mysqli($servername, $username, $password, $database);
+// Create connection
+$conn = new mysqli('localhost', 'root', '', 'flask_user');
 
 // Check connection
 if ($conn->connect_error) {
@@ -18,23 +14,17 @@ if ($conn->connect_error) {
 }
 
 // Get form data
-$fullName = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-$signupemail = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-$signupusername = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
-$signuppassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
+$name = $_POST['name'];
+$email = $_POST['email'];
 
-// Prepare statement
-$stmt = $conn->prepare("INSERT INTO users (name, email, username, password) VALUES (?, ?, ?, ?)");
-$stmt->bind_param("ssss", $fullName, $signupemail, $signupusername, $signuppassword);
-
-// Execute statement
-if ($stmt->execute()) {
-    echo "New record created successfully!";
+// Insert data into the database
+$sql = "INSERT INTO users (name, email) VALUES ('$name', '$email')";
+if ($conn->query($sql) === TRUE) {
+    echo "Record added successfully!";
 } else {
-    echo "Error: " . $stmt->error;
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-$stmt->close();
+// Close connection
 $conn->close();
 ?>
-```
