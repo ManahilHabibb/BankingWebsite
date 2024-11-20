@@ -16,6 +16,8 @@ if ($conn->connect_error) {
 // Get form data
 $name = $_POST['name'];
 $email = $_POST['email'];
+$username = $_POST['username'];
+$password = $_POST['password'];
 
 // Insert data into the database
 $sql = "INSERT INTO users (name, email) VALUES ('$name', '$email')";
