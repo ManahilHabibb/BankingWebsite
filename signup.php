@@ -1,32 +1,43 @@
 <?php
 // Database credentials
 $servername = "localhost";
-$username = "root"; // Default username for XAMPP
-$password = "";     // Default password for XAMPP
-$dbname = "flask_user";
+$username = "root"; 
+$password = "";     
+$dbname = "bank";
 
-// Create connection
-$conn = new mysqli('localhost', 'root', '', 'flask_user');
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
 }
 
-// Get form data
-$name = $_POST['name'];
-$email = $_POST['email'];
-$username = $_POST['username'];
-$password = $_POST['password'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $username = $_POST['username']; // User's entered username
+    $password = $_POST['password']; // User's entered password
+    
 
-// Insert data into the database
-$sql = "INSERT INTO users (name, email) VALUES ('$name', '$email')";
-if ($conn->query($sql) === TRUE) {
-    echo "Record added successfully!";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    // Query to get the user by username
+    $stmt = $conn->prepare("SELECT * FROM users WHERE username = :username");
+    $stmt->bindParam(':username', $username);
+    $stmt->execute();
+
+    // Fetch user data
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    // Check if the user exists and verify the password
+    if ($user && password_verify($password, $user['password'])) {
+        // Password is correct, start the session
+        $_SESSION['username'] = $username;
+
+        // Redirect to welcome.php
+        header("Location: html.php");
+        exit(); // Ensure no further code is executed
+    } else {
+        // If the username or password is incorrect
+        $message = 'Invalid username or password!';
+    }
 }
-
-// Close connection
-$conn->close();
 ?>

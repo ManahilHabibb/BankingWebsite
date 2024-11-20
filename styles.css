@@ -449,12 +449,43 @@ z-index: 1;
 }
 
 
+/* About Us Section */
+.bg-purple {
+    background-color: #4a1765;
+}
 
+/* Text Styles */
+.text-purple {
+    color: #4a1765;
+    text-decoration: none;
+}
+.text-purple:hover {
+    text-decoration: underline;
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.card img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.card-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.card-text {
+    font-size: 0.9rem;
+    color: #333;
+}
 
 
 /* Reviews Section */
 .reviews-section {
-    padding: 100px 0;
+    padding: 60px 0;
     background-color: #fff;
     overflow: hidden;
 }
@@ -831,5 +862,61 @@ z-index: 1;
 @keyframes apper {
     0% {
         transform: translateX(-50%);
+    }
+}
+
+/* Contact Us Section */
+.h1-con {
+    color: #5a2d82; /* Dark purple for the main heading */
+    font-weight: bold;
+}
+
+h5 {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Styling for the container sections */
+.container-con {
+    background: #ffffff; /* White background for the content */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    margin-right: 60px;
+    margin-left: 60px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Link styling */
+a {
+    color: #5a2d82; /* Purple color for links */
+    text-decoration: none; /* Remove underline by default */
+}
+
+a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Column content spacing */
+.row > div {
+    margin-bottom: 1.5rem;
+}
+
+/* Small text styling */
+.text-muted {
+    font-size: 0.875rem; /* Slightly smaller font for muted text */
+    color: #6c757d; /* Bootstrap muted color */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+    h1 {
+        font-size: 1.5rem; /* Slightly smaller heading for mobile */
+    }
+    h5 {
+        font-size: 1.25rem;
     }
 }

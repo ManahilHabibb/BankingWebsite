@@ -22,13 +22,25 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Solutions</a>
+                    <a class="nav-link" href="#services">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Resources</a>
+                    <a class="nav-link" href="#resources">Resources</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Company</a>
+                    <a class="nav-link" href="#company">Company</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#reviews">Reviews</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#aboutus">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contactus">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#policies">Policies</a>
                 </li>
             </ul>
             <div class="auth-buttons ml-4">
@@ -80,14 +92,6 @@
             </div>
             <div class="modal-body">
                 <form action="login.php" method="post">
-                    <div class="mb-3">
-                        <label for="fullName" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" id="fullName" name="name" placeholder="Enter your full name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
                     <div class="mb-3">
                         <label for="username" class="form-label">Username</label>
                         <input type="text" class="form-control" id="username" name="username" placeholder="Enter your Username" required>
@@ -155,7 +159,7 @@
 </script>
 
     <!-- Partner Logos Section -->
-    <div class="container-fluid bg-white py-4">
+    <div id="services" class="container-fluid bg-white py-4">
         <div class="partner-logos">
             <div class="partner-logo">
                 <i class="bi bi-circle-fill"></i>
@@ -217,7 +221,7 @@
     </section>
 
     <!-- Core Benefits Section -->
-    <section class="core-benefits">
+    <section id="resources" class="core-benefits">
         <div class="container">
             <div class="benefits-header">
                 <p class="subtitle">OUR CORE BENEFITS</p>
@@ -302,7 +306,7 @@
     </section>
 
     <!-- Data Driven Section -->
-    <section class="data-section">
+    <section id="company" class="data-section">
         <div class="container">
             <div class="row align-items-center gy-5">
                 <div class="col-lg-6">
@@ -368,7 +372,7 @@
 
 
     <!-- Reviews Section -->
-    <section class="reviews-section">
+    <section id="reviews" class="reviews-section">
         <div class="container">
             <h2 class="reviews-title">Hear What Our Clients Say</h2>
             
@@ -464,9 +468,146 @@
         </div>
     </section>
 
+<!-- About Us Section -->
+<section id="aboutus" class="aboutus-section">
+    <div class="container-fluid bg-purple text-white py-5">
+            <div class="container text-center">
+                <h1 class="mb-4">Social Impact</h1>
+                <p class="lead">Spark positive change.</p>
+                <p class="description">
+                    We firmly believe it’s our responsibility as corporate citizens to make a positive social impact 
+                    on the world around us. This belief is embedded in the very fabric of our business and culture. 
+                    We’re focused on environmental, social, and governance (ESG) issues that differentiate us from 
+                    our peers, provide a positive social impact and help our stakeholders understand what’s 
+                    important to us.
+                </p>
+                <a href="#" class="btn btn-link text-white">Learn more about social impact</a>
+            </div>
+        </div>
+
+        <div class="container my-5">
+            <div class="row g-4">
+                <!-- Economic Mobility Card -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="economic-mobility.jpg" class="card-img-top" alt="Economic Mobility">
+                        <div class="card-body">
+                            <h5 class="card-title">Economic Mobility</h5>
+                            <p class="card-text">
+                                We support economic mobility for all. It’s about connecting, collaborating, and working within the community. 
+                                Providing greater access to financial education and resources not only enriches people’s lives, it helps 
+                                empower them to improve their economic circumstances.
+                            </p>
+                            <a href="#" class="text-purple">Find out more about our unique approach</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Employee Giving Card -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="employee-giving.jpg" class="card-img-top" alt="Employee Giving">
+                        <div class="card-body">
+                            <h5 class="card-title">Employee Giving</h5>
+                            <p class="card-text">
+                                Our employees believe in the power of connecting with the communities they live and work in. They roll up their 
+                                sleeves and dedicate their time and energy to making a difference. We share our employees’ passion for giving 
+                                back by matching their contributions and encouraging them to volunteer.
+                            </p>
+                            <a href="#" class="text-purple">See what we’re doing in the community</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diversity and Inclusion Card -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="diversity-inclusion.jpg" class="card-img-top" alt="Diversity and Inclusion">
+                        <div class="card-body">
+                            <h5 class="card-title">Diversity and Inclusion</h5>
+                            <p class="card-text">
+                                We are united by our differences. The best ideas come from a collective mixture of different perspectives 
+                                and voices. When we welcome and support one another, we open the door to new ideas that help us build better 
+                                relationships and experiences for our customers, employees and the communities we serve.
+                            </p>
+                            <a href="#" class="text-purple">Learn more about our inclusive culture</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Contact Us Section -->
+<section id="contactus" class="contactus-section">
+    <div class="container-con my-5">
+        <h1 class="h1-con mb-4">Contact</h1>
+
+        <!-- Hard of Hearing Section -->
+        <div class="mb-4">
+            <h5>Hard of hearing</h5>
+            <p class="text-muted">For all account types</p>
+            <p>
+                <strong>Call</strong> <br>
+                General: <a href="tel:711">711</a> <br>
+                <small class="text-muted">Have the phone number you’re trying to reach ready</small>
+            </p>
+        </div>
+
+        <!-- Auto Section -->
+        <div class="mb-4">
+            <h5>Auto</h5>
+            <div class="row">
+                <!-- Chat Section -->
+                <div class="col-md-4">
+                    <p>
+                        <strong>Chat</strong> <br>
+                        <a href="#">Log In to chat</a>
+                    </p>
+                </div>
+
+                <!-- Call Section -->
+                <div class="col-md-4">
+                    <p>
+                        <strong>Call</strong> <br>
+                        <a href="tel:1-888-925-2559">1-888-925-2559</a> <br>
+                        <small>Mon – Fri, 8 am – 11 pm ET<br>Sat, 9 am – 7 pm ET</small><br>
+                        Chat: <a href="#">Log in to chat</a>
+                    </p>
+                    <p>
+                        Outside the U.S.: <a href="tel:+1-316-652-6430">+1-316-652-6430</a> <br>
+                        Chat: <a href="#">Log in to chat</a>
+                    </p>
+                    <p>
+                        American Suzuki Financial Services: <br>
+                        <a href="tel:1-888-895-7578">1-888-895-7578</a> <br>
+                        Chat: <a href="#">Log in to chat</a>
+                    </p>
+                </div>
+
+                <!-- Mail Section -->
+                <div class="col-md-4">
+                    <p>
+                        <strong>Mail</strong> <br>
+                        <strong>Payments</strong> <br>
+                        Payment Processing Center<br>
+                        P.O. Box 71119<br>
+                        Charlotte, NC 28272-1119
+                    </p>
+                    <p>
+                        <strong>Payment disputes, payments with restrictions or endorsements, or customer service correspondence</strong><br>
+                        Ally Financial<br>
+                        P.O. Box 380901<br>
+                        Bloomington, MN 55438
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Footer Section -->
-    <footer class="footer-section">
+    <footer id="policies" class="footer-section">
         <div class="container">
             <!-- Hero Content -->
             <div class="footer-hero text-center">
