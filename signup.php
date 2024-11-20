@@ -17,10 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $username = $_POST['username']; // User's entered username
     $password = $_POST['password']; // User's entered password
-    
 
     // Query to get the user by username
-    $stmt = $conn->prepare("SELECT * FROM users WHERE username = :username");
+    $stmt = $conn->prepare("SELECT * FROM signup WHERE username = :username");
     $stmt->bindParam(':username', $username);
     $stmt->execute();
 
