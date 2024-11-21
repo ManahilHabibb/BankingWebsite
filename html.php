@@ -541,7 +541,7 @@
 
 <!-- Contact Us Section -->
 <section id="contactus" class="contactus-section">
-    <div class="container-con my-5">
+    <div class="container-con my-5 mt-0">
         <h1 class="h1-con mb-4">Contact</h1>
 
         <!-- Hard of Hearing Section -->
@@ -584,6 +584,11 @@
                         <a href="tel:1-888-895-7578">1-888-895-7578</a> <br>
                         Chat: <a href="#">Log in to chat</a>
                     </p>
+                    <p>
+                        American Suzuki Financial Services: <br>
+                        <a href="tel:1-888-895-7578">1-888-895-7578</a> <br>
+                        Chat: <a href="#">Log in to chat</a>
+                    </p>
                 </div>
 
                 <!-- Mail Section -->
@@ -601,6 +606,13 @@
                         P.O. Box 380901<br>
                         Bloomington, MN 55438
                     </p>
+                    <p>
+                        <strong>Mail</strong> <br>
+                        <strong>Payments</strong> <br>
+                        Payment Processing Center<br>
+                        P.O. Box 71119<br>
+                        Charlotte, NC 28272-1119
+                    </p>
                 </div>
             </div>
         </div>
@@ -611,7 +623,7 @@
     <footer id="policies" class="footer-section">
         <div class="container">
             <!-- Hero Content -->
-            <div class="footer-hero text-center">
+            <div class="footer-hero text-center mt-0 mb-0">
                 <h1 class="hero-title">Join million people<br>who trust us</h1>
                 <p class="hero-subtitle">Simplifies the process of curating, and providing<br>Great benefits to your people.</p>
                 <button class="get-started-btn">Get Start Now</button>

@@ -448,40 +448,6 @@ z-index: 1;
     }
 }
 
-
-/* About Us Section */
-
-.bg-purple {
-    background-color: #0a061f;
-}
-
-.text-purple {
-    color: #4a1765;
-    text-decoration: none;
-}
-.text-purple:hover {
-    text-decoration: underline;
-}
-
-.card {
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-.card img {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
-.card-title {
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-.card-text {
-    font-size: 0.9rem;
-    color: #333;
-}
-
-
 /* Reviews Section */
 .reviews-section {
     padding: 100px 0;
@@ -862,6 +828,42 @@ z-index: 1;
     0% {
         transform: translateX(-50%);
     }
+}
+
+/* About Us Section */
+
+.bg-purple {
+    background-color: #0a061f;
+}
+
+.text-purple {
+    color: #4a1765;
+    text-decoration: none;
+}
+.text-purple:hover {
+    text-decoration: underline;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+.card img {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+.card-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.card-text {
+    font-size: 0.9rem;
+    color: #333;
 }
 
 /* Contact Us Section */
