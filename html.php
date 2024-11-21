@@ -472,7 +472,7 @@
 <section id="aboutus" class="aboutus-section">
     <div class="container-fluid bg-purple text-white py-5">
             <div class="container text-center">
-                <h1 class="mb-4">Social Impact</h1>
+                <h1 class="mb-4">Committed beyond banking</h1>
                 <p class="lead">Spark positive change.</p>
                 <p class="description">
                     We firmly believe it’s our responsibility as corporate citizens to make a positive social impact 
@@ -490,13 +490,14 @@
                 <!-- Economic Mobility Card -->
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="economic-mobility.jpg" class="card-img-top" alt="Economic Mobility">
+                        <img src="ab1.png.jpg" class="card-img-top" alt="Economic Mobility">
                         <div class="card-body">
                             <h5 class="card-title">Economic Mobility</h5>
                             <p class="card-text">
                                 We support economic mobility for all. It’s about connecting, collaborating, and working within the community. 
                                 Providing greater access to financial education and resources not only enriches people’s lives, it helps 
-                                empower them to improve their economic circumstances.
+                                empower them to improve their economic circumstances  that help us build better 
+                                relationships and experiences for our customers, employees.
                             </p>
                             <a href="#" class="text-purple">Find out more about our unique approach</a>
                         </div>
@@ -506,7 +507,7 @@
                 <!-- Employee Giving Card -->
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="employee-giving.jpg" class="card-img-top" alt="Employee Giving">
+                        <img src="ab2.png.jpg" class="card-img-top" alt="Employee Giving">
                         <div class="card-body">
                             <h5 class="card-title">Employee Giving</h5>
                             <p class="card-text">
@@ -522,7 +523,7 @@
                 <!-- Diversity and Inclusion Card -->
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="diversity-inclusion.jpg" class="card-img-top" alt="Diversity and Inclusion">
+                        <img src="ab3.png.jpg" class="card-img-top" alt="Diversity and Inclusion">
                         <div class="card-body">
                             <h5 class="card-title">Diversity and Inclusion</h5>
                             <p class="card-text">
