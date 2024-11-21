@@ -1,40 +1,26 @@
 <?php
-// Database credentials
-$servername = "localhost";
-$username = "root"; 
-$password = "";     
-$dbname = "bank";
+include 'db.php'; // Database connection
 
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch(PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-}
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = $_POST['username']; // User's entered username
-    $password = $_POST['password']; // User's entered password
-
-    // Query to get the user by username
-    $stmt = $conn->prepare("SELECT * FROM users WHERE username = :username");
-    $stmt->bindParam(':username', $username);
+    $query = "SELECT * FROM users WHERE username = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("s", $username);
     $stmt->execute();
+    $result = $stmt->get_result();
 
-    // Fetch user data
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    // Check if the user exists and verify the password
-    if ($user && password_verify($password, $user['password'])) {
-        // Password is correct, start the session
-        $_SESSION['username'] = $username;
-
-        // Redirect to welcome.php
-        header("Location: html.php");
-        exit(); // Ensure no further code is executed
+    if ($result->num_rows > 0) {
+        $user = $result->fetch_assoc();
+        if (password_verify($password, $user['password'])) {
+            echo "Login successful! Welcome, " . htmlspecialchars($user['username']) . ".";
+        } else {
+            echo "Invalid credentials.";
+        }
     } else {
-        // If the username or password is incorrect
-        $message = 'Invalid username or password!';
+        echo "No user found.";
     }
 }
 ?>
+
