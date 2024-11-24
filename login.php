@@ -5,10 +5,10 @@ include 'db.php';
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = trim($_POST['username']);
+    $password = trim($_POST['password']);
 
-    if (isset($_POST['login'])) { // Handle signup
+    if (isset($_POST['signup'])) { // Handle signup
         // Check if username already exists
         $stmt = $conn->prepare("SELECT * FROM login WHERE username = :username");
         $stmt->bindParam(':username', $username);
@@ -24,9 +24,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->bindParam(':password', $hashedPassword);
 
             if ($stmt->execute()) {
-                $message = 'You are logged in successfully.';
+                $message = 'You are signed up successfully.';
             } else {
-                $message = 'Login failed. Please try again.';
+                $message = 'Signup failed. Please try again.';
             }
         }
     } elseif (isset($_POST['login'])) { // Handle login
