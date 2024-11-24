@@ -1,4 +1,10 @@
 <!-- index.html -->
+ <?php
+session_start();
+include 'login.php';
+include 'signup.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,7 +106,7 @@
                         <label for="password" class="form-label">Password</label>
                         <input type="password" class="form-control" id="password" name="password" placeholder="Enter your Password" required>
                     </div>
-                    <button type="submit" class="btn btn-login w-100">LOGIN</button>
+                    <button type="submit" name="login" class="btn btn-login w-100">LOGIN</button>
                 </form>
             </div>
         </div>
@@ -134,9 +140,9 @@
                     </div>
                     <div class="mb-3">
                         <label for="confirmPassword" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="confirmPassword" placeholder="Re-enter your password" required>
+                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" required>
                     </div>
-                    <button type="submit" class="btn btn-signup w-100">SIGN UP</button>
+                    <button type="submit" name="signup" class="btn btn-signup w-100">SIGN UP</button>
                 </form>
             </div>
         </div>
