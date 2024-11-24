@@ -1,7 +1,6 @@
 <?php
 include 'db.php';
 // Start the session
-session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'];
@@ -32,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $message = 'Signup failed. Please try again.';
             }
         }
-    } elseif (isset($_POST['login'])) { // Handle login
+    } elseif (isset($_POST['signup'])) { // Handle login
         $stmt = $conn->prepare("SELECT * FROM signup WHERE username = :username");
         $stmt->bindParam(':username', $username);
         $stmt->execute();
