@@ -1,12 +1,23 @@
 <?php
-include 'db.php';
-// Start the session
+if (session_status() === PHP_SESSION_NONE) {
+    session_start(); // Start the session only if none exists
+}
+
+// Database credentials
+$servername = "localhost";
+$username = "root"; 
+$password = "";     
+$dbname = "bank";
+
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $name = htmlspecialchars($_POST['name'] ?? '');
+    $email = htmlspecialchars($_POST['email'] ?? '');
+    $username = htmlspecialchars($_POST['username'] ?? '');
+    $password = $_POST['password'] ?? '';
 
     if (isset($_POST['signup'])) { // Handle signup
         // Check if username already exists
@@ -31,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $message = 'Signup failed. Please try again.';
             }
         }
-    } elseif (isset($_POST['signup'])) { // Handle login
+    } elseif (isset($_POST['login'])) { // Handle login
         $stmt = $conn->prepare("SELECT * FROM signup WHERE username = :username");
         $stmt->bindParam(':username', $username);
         $stmt->execute();
@@ -40,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($user && password_verify($password, $user['password'])) {
             $_SESSION['username'] = $username;
-            header("Location: login.php");
+            header("Location: dashboard.php"); // Redirect to the dashboard or home page
             exit();
         } else {
             $message = 'Invalid username or password!';

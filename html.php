@@ -1,6 +1,8 @@
-<!-- index.html -->
+
  <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start(); // Start the session only if none exists
+}
 include 'login.php';
 include 'signup.php';
 ?>
@@ -97,6 +99,7 @@ include 'signup.php';
                 <h5 class="modal-title" id="loginModalLabel">Enter your Login Details</h5>
             </div>
             <div class="modal-body">
+              <?php if (isset($message)) echo "<div class='alert alert-warning'>$message</div>"; ?>
                 <form action="login.php" method="post">
                     <div class="mb-3">
                         <label for="username" class="form-label">Username</label>
@@ -122,6 +125,7 @@ include 'signup.php';
             </div>
             <div class="modal-body">
                 <form action="signup.php" method="post">
+                  <?php if (isset($message)) echo "<div class='alert alert-warning'>$message</div>"; ?>
                     <div class="mb-3">
                         <label for="fullName" class="form-label">Full Name</label>
                         <input type="text" class="form-control" id="fullName" name="name" placeholder="Enter your full name" required>
