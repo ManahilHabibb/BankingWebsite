@@ -125,26 +125,26 @@ include 'signup.php';
                 <h5 class="modal-title" id="signUpModalLabel">Create Your Account</h5>
             </div>
             <div class="modal-body">
-                <form action="signup.php" method="post">
-                  <?php if (isset($message)) echo "<div class='alert alert-warning'>$message</div>"; ?>
+                <form action="signup.php" method="post" id="registrationForm" onsubmit="return validateForm()">
+                    <?php if (isset($message)) echo "<div class='alert alert-warning'>$message</div>"; ?>
                     <div class="mb-3">
-                        <label for="fullName" class="form-label">Full Name</label>
+                        <label for="fullName" class="form-label">Full Name <span class="error" id="nameError"></span></label>
                         <input type="text" class="form-control" id="fullName" name="name" placeholder="Enter your full name" required>
                     </div>
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
+                        <label for="email" class="form-label">Email <span class="error" id="emailError"></span></label>
                         <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
                     </div>
                     <div class="mb-3">
-                        <label for="username" class="form-label">Username</label>
+                        <label for="username" class="form-label">Username <span class="error" id="userIdError"></span></label>
                         <input type="text" class="form-control" id="username" name="username" placeholder="Choose a username" required>
                     </div>
                     <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
+                        <label for="password" class="form-label">Password <span class="error" id="passwordError"></span></label>
                         <input type="password" class="form-control" id="password" name="password" placeholder="Create a password" required>
                     </div>
                     <div class="mb-3">
-                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <label for="confirmPassword" class="form-label">Confirm Password <span class="error" id="confirmPasswordError"></span></label>
                         <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" required>
                     </div>
                     <button type="submit" name="signup" class="btn btn-signup w-100">SIGN UP</button>
@@ -162,11 +162,70 @@ include 'signup.php';
         loginModal.show(); 
     });
 
-    document.querySelector('.auth-buttons a.btn-primary').addEventListener('click', function(event) {
+    document.querySelector('.auth-buttons a.btn-primary').addEventListener('click', function(event) { 
         event.preventDefault(); 
         var signUpModal = new bootstrap.Modal(document.getElementById('signUpModal'));
         signUpModal.show(); 
     });
+
+//     function validateForm() {
+//     let isValid = true;
+
+//     const userId = document.getElementById('username').value.trim();
+//     const password = document.getElementById('password').value.trim();
+//     const confirmPassword = document.getElementById('confirmPassword').value.trim();
+//     const name = document.getElementById('fullName').value.trim();
+//     const email = document.getElementById('email').value.trim();
+
+//     // Clear previous errors
+//     document.querySelectorAll('.error').forEach(e => e.textContent = '');
+
+//     // Username validation
+//     if (userId.length < 5 || userId.length > 12) {
+//         document.getElementById('userIdError').textContent = 'Required and must be between 5 to 12 characters.';
+//         isValid = false;
+//     }
+
+//     // Password validations
+//     if (password.length < 7 || password.length > 12) {
+//         document.getElementById('passwordError').textContent = 'Password must be between 7 to 12 characters.';
+//         isValid = false;
+//     }
+//     if (!/[A-Z]/.test(password)) {
+//         document.getElementById('passwordError').textContent += ' Must include at least one uppercase letter.';
+//         isValid = false;
+//     }
+//     if (!/[a-z]/.test(password)) {
+//         document.getElementById('passwordError').textContent += ' Must include at least one lowercase letter.';
+//         isValid = false;
+//     }
+//     if (!/[!@#$%^&*()]/.test(password)) {
+//         document.getElementById('passwordError').textContent += ' Must include at least one special character.';
+//         isValid = false;
+//     }
+//     if (/\s/.test(password)) {
+//         document.getElementById('passwordError').textContent += ' Must not contain spaces.';
+//         isValid = false;
+//     }
+//     if (password !== confirmPassword) {
+//         document.getElementById('confirmPasswordError').textContent = 'Passwords do not match.';
+//         isValid = false;
+//     }
+
+//     // Name validation
+//     if (!/^[A-Za-z\s]+$/.test(name)) {
+//         document.getElementById('nameError').textContent = 'Name must contain alphabets only.';
+//         isValid = false;
+//     }
+
+//     // Email validation
+//     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+//         document.getElementById('emailError').textContent = 'Enter a valid email address.';
+//         isValid = false;
+//     }
+
+//     return isValid;
+// }
 </script>
 
     <!-- Partner Logos Section -->

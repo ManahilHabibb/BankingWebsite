@@ -921,3 +921,9 @@ a:hover {
         font-size: 1.25rem;
     }
 }
+
+/* Errors Section */
+.error {
+    color: red;
+    font-size: 0.9em;
+}
