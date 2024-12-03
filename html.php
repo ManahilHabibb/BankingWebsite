@@ -3,6 +3,7 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start(); // Start the session only if none exists
 }
+
 include 'login.php';
 include 'signup.php';
 ?>

@@ -3,7 +3,6 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start(); // Start the session only if none exists
 }
-
 // Database credentials
 $servername = "localhost";
 $username = "root"; 
@@ -47,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if (isset($_SESSION['valid'])){
-            header("Location: php/html.php");
+            header("Location: html.php");
             exit();
         } else {
             $message = 'Invalid username or password!';
