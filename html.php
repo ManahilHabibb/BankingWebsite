@@ -168,64 +168,60 @@ include 'signup.php';
         signUpModal.show(); 
     });
 
-//     function validateForm() {
-//     let isValid = true;
+    function validateForm() {
+    let isValid = true;
 
-//     const userId = document.getElementById('username').value.trim();
-//     const password = document.getElementById('password').value.trim();
-//     const confirmPassword = document.getElementById('confirmPassword').value.trim();
-//     const name = document.getElementById('fullName').value.trim();
-//     const email = document.getElementById('email').value.trim();
+    const userId = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const confirmPassword = document.getElementById('confirmPassword').value.trim();
+    const name = document.getElementById('fullName').value.trim();
+    const email = document.getElementById('email').value.trim();
 
-//     // Clear previous errors
-//     document.querySelectorAll('.error').forEach(e => e.textContent = '');
+    // Clear previous errors
+    document.querySelectorAll('.error').forEach(e => e.textContent = '');
 
-//     // Username validation
-//     if (userId.length < 5 || userId.length > 12) {
-//         document.getElementById('userIdError').textContent = 'Required and must be between 5 to 12 characters.';
-//         isValid = false;
-//     }
+    // Username validation
+    if (userId.length < 5 || userId.length > 12) {
+        document.getElementById('userIdError').textContent = 'Required and must be between 5 to 12 characters.';
+        isValid = false;
+    }
 
-//     // Password validations
-//     if (password.length < 7 || password.length > 12) {
-//         document.getElementById('passwordError').textContent = 'Password must be between 7 to 12 characters.';
-//         isValid = false;
-//     }
-//     if (!/[A-Z]/.test(password)) {
-//         document.getElementById('passwordError').textContent += ' Must include at least one uppercase letter.';
-//         isValid = false;
-//     }
-//     if (!/[a-z]/.test(password)) {
-//         document.getElementById('passwordError').textContent += ' Must include at least one lowercase letter.';
-//         isValid = false;
-//     }
-//     if (!/[!@#$%^&*()]/.test(password)) {
-//         document.getElementById('passwordError').textContent += ' Must include at least one special character.';
-//         isValid = false;
-//     }
-//     if (/\s/.test(password)) {
-//         document.getElementById('passwordError').textContent += ' Must not contain spaces.';
-//         isValid = false;
-//     }
-//     if (password !== confirmPassword) {
-//         document.getElementById('confirmPasswordError').textContent = 'Passwords do not match.';
-//         isValid = false;
-//     }
+    // Password validations
+    const passwordError = document.getElementById('passwordError');
+    if (password.length < 7 || password.length > 12) {
+        passwordError.textContent = 'Password must be between 7 to 12 characters.';
+        isValid = false;
+    } else if (!/[A-Z]/.test(password)) {
+        passwordError.textContent += ' Must include at least one uppercase letter.';
+        isValid = false;
+    } else if (!/[a-z]/.test(password)) {
+        passwordError.textContent += ' Must include at least one lowercase letter.';
+        isValid = false;
+    } else if (!/[!@#$%^&*()]/.test(password)) {
+        passwordError.textContent += ' Must include at least one special character.';
+        isValid = false;
+    } else if (/\s/.test(password)) {
+        passwordError.textContent += ' Must not contain spaces.';
+        isValid = false;
+    } else if (password !== confirmPassword) {
+        document.getElementById('confirmPasswordError').textContent = 'Passwords do not match.';
+        isValid = false;
+    }
 
-//     // Name validation
-//     if (!/^[A-Za-z\s]+$/.test(name)) {
-//         document.getElementById('nameError').textContent = 'Name must contain alphabets only.';
-//         isValid = false;
-//     }
+    // Name validation
+    if (!/^[A-Za-z\s]+$/.test(name)) {
+        document.getElementById('nameError').textContent = 'Name must contain alphabets only.';
+        isValid = false;
+    }
 
-//     // Email validation
-//     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-//         document.getElementById('emailError').textContent = 'Enter a valid email address.';
-//         isValid = false;
-//     }
+    // Email validation
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        document.getElementById('emailError').textContent = 'Enter a valid email address.';
+        isValid = false;
+    }
 
-//     return isValid;
-// }
+    return isValid;
+}
 </script>
 
     <!-- Partner Logos Section -->
